@@ -14,6 +14,8 @@ import org.apache.http.impl.client.HttpClients;
 
 import com.jayway.jsonpath.JsonPath;
 
+//You can JackSon for creating user Objects but I found Instagram Response very dynamic so I used
+
 public class InstagramUserFeedData extends UserData {
 
 	

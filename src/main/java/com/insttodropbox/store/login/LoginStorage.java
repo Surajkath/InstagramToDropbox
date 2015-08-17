@@ -21,7 +21,9 @@ import com.dropbox.core.json.JsonReader.FileLoadException;
 @Path("/loginStorage/")
 public class LoginStorage {
 
-	Storage storage = new DropBoxStorage("03hm18czqjqmbo3","hubjsfm67cma7v5","http://localhost:8080/InstagramToDropbox/rest/loginStorage/callBackStorage");
+	Storage storage = new DropBoxStorage(“Storage_Key”,”Storage_Password”,”callBackUrl”);
+	//I haven’t done the dependency injection here you can do it with spring or any other framework you like
+	//in my case the callback url is /../loginStorage/callBackStorage
 
 	@Path("/signinToStorage/")
 	@GET

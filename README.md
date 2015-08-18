@@ -7,6 +7,7 @@ Configuration Points.
 You need to create your own Instagram and DropBox Configurations(basically registering your app).
 
 Steps regarding the storage is as follows
+
 1.Its starts with hitting localhost:8080/../login/signinToInstagram which takes the user to instagram and if gives the permission to your back
 It hit back the callback Url you set in configuration(fot me it is localhost:8080/../login/callBackInstagram)
 

@@ -30,11 +30,14 @@ public class LoginInstagram {
 	public void loginHttpClient(@Context HttpServletRequest request,
 			@Context HttpServletResponse response) throws IOException,
 			IllegalAccessException {
+		
+		//Ideally service should be stateless so that the same service can be ported to different servers
+		//But for the ease I am setting it in a session you can also pass a json of URl’s	
 		request.getSession().setAttribute("images",
 				client.fetchUserData(request, response));
 		String accessCodeInstagram = request.getParameter("code");
-		// setting session attribute should be in logic but I deliberately put
-		// it here
+		
+		// setting session attribute should be in logic but I deliberately put it here
 		// so people can see it and decide for themselves how to consider CSRF
 		// protection(this is just a sample way to do it ideally you need to
 		// check every request you get which is very much application dependent)
